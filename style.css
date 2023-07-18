@@ -102,6 +102,9 @@ body{
     align-items: center;
     gap: 15px;
 }
+.writing svg{
+    cursor: pointer;
+}
 .writing input{
     height: 30px;
     width: 80%;
@@ -217,7 +220,8 @@ body{
     grid-row: 2/3;
 
     display: grid;
-    grid-template-columns: 1fr minmax(200px, 250px);
+    grid-template-columns: 1fr minmax(250px, 300px);
+    grid-template-rows: 50% 50%;
 
     margin-top: 15px;
     padding: 25px;
@@ -225,6 +229,9 @@ body{
     box-shadow: inset 0px 10px 10px rgb(185, 184, 184);
 
     gap: 20px;
+}
+.content .main-content{
+    grid-template: 1/3/1/2;
 }
 .content .yp {
     margin: 0 10px 10px 10px ;
@@ -241,7 +248,7 @@ body{
 }
 .content .projects .project .yellow-stripe{
     height: 100%;
-    width: 24px;
+    width: 10px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color: orange;
@@ -274,9 +281,100 @@ body{
 .content .projects .project .icons{
     height: 50px;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     justify-content: end;
     padding-right: 30px;
 }
+.content .projects .project .icons svg{
+    border-radius: 20px;
+    height: 25px;
+    padding: 4px;
+    border: 1px solid white;
+    margin: 0;
+}
+.content .projects .project .icons svg:hover{
+    border: 1px solid grey;
+    cursor: pointer;
+}
+.content .announcements{
+    grid-template: 1/2/2/3;
+}
+.content .announcements .announ-p{
+    margin: 0;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.content .announ-cont{
+    background-color: #fff;
+    padding: 0px 20px 20px 20px;
+    font-size: 13px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 
+    max-height: 95%;
+}
+.content .announ-cont .news{
+    border-bottom: 1px solid rgb(179, 179, 179);
+    padding: 0;
+}
+.content .announ-cont .news:last-child{
+    border: none;
+}
+.content .announ-cont .news h4{
+    padding: 0;
+    font-size: 14px;
+}
+.content .announ-cont .news p{
+    padding: 0;
+    margin-top: -10px;
+}
+.content .trending{
+    margin-top: 10px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.content .trending .trend-head{
+    font-weight: 600;
+}
+.content .trending .trends{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px 0 5px 40px;
+    max-height: 300px;
 
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.content .trending .trend{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    font-size: 12px;
+    height: 50px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+.trend-logo{
+    grid-row: 1/2;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    background-image: url(./images/megan-fox-attends-the-nocap-shows-x-machine-gun-kelly-news-photo-1684246310.jpg);
+    background-size: cover;
+    background-position: 40% 0;
+}
+.trend-cont{
+    grid-column: 2/3;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.trend-cont h4,
+.trend-cont p{
+    margin: 0
+}
